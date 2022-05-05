@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import logging
-import jwt
 import datetime
 import base64
 import hmac
@@ -35,7 +34,7 @@ if __name__ == '__main__':
   headers = json.dumps({"alg": "HS256", "typ": "JWT"})
   payload = json.dumps({"iss": "jiankaiwang",
                         "sub": "updating-db",
-                        "aud": "db-server",
+                        # "aud": "db-server",
                         "exp": currentTime + 60*10,
                         "timestamp": currentTime})
 

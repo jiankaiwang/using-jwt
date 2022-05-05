@@ -71,3 +71,23 @@ eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJpc3MiOiAiamlhbmthaXdhbmciLCAic3ViIjo
 Next you can verify the JWT token by `JWT.io`.
 
 ![](./doc/jwt.io.png)
+
+Otherwise, you can verify the JWT by `verify.py`. You can replace the `JWToken` on the script.
+
+```py
+if __name__ == '__main__':
+
+  priKey = """-----BEGIN PRIVATE KEY----------END PRIVATE KEY-----"""
+  JWToken = "(You can generate JWT from requests.py.)"
+
+  if len(JWToken) < 1:
+```
+
+, then run the following commands.
+
+```sh
+python3 -m virtualenv -p python3 env
+source ./env/bin/activate
+pip3 install --no-cache-dir ./environ/requirements.txt
+python3 verify.py
+```
